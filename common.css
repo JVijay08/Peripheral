@@ -1,0 +1,137 @@
+* {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+
+}
+
+.opening-screen, .surface, .blind-spot-screen, .screen,.final-screen {
+
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+
+}
+
+.background, .overlay {
+
+    position: absolute;
+    inset: 0;
+
+}
+
+.background {
+
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 1;
+
+}
+
+.overlay {
+
+    z-index: 2;
+    pointer-events: none;
+
+}
+
+.label {
+
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.3em;
+
+}
+
+.heading {
+
+    color: #111;
+    font-weight: 600;
+    opacity: 0;
+
+}
+
+.button {
+
+    display: inline-block;
+    border-radius: 999px;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background 0.25s ease, color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.button-outline {
+
+    border: 1px solid #111;
+    background: transparent;
+    color: #111;
+
+}
+
+.button-outline:hover {
+
+    background: #111;
+    color: white;
+    transform: translateY(-2px);
+
+}
+
+.button-filled {
+
+    background: #111;
+    color: white;
+
+}
+
+.button-filled:hover {
+
+    background: #000;
+    transform: translateY(-2px);
+
+}
+
+.button:active {
+
+    transform: translateY(0);
+
+}
+
+.button:focus-visible {
+
+    outline: 3px solid rgba(0, 0, 0, 0.25);
+    outline-offset: 5px;
+
+}
+
+@keyframes fadeIn {
+
+    from {
+
+        opacity: 0;
+        transform: translateY(14px);
+
+    }
+
+    to {
+
+        opacity: 1;
+        transform: translateY(0);
+
+    }
+    
+}

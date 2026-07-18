@@ -1,0 +1,297 @@
+body {
+
+    background: #ececec;
+
+}
+
+.background {
+
+    background-image: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url("tunnel.avif");
+    filter: blur(10px);
+    transform: scale(1.08);
+
+}
+
+.overlay {
+
+    background: rgba(255, 255, 255, 0.45);
+
+}
+
+.edge-zone {
+
+    position: absolute;
+    z-index: 6;
+
+}
+
+.edge-top {
+
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 90px;
+
+}
+
+.edge-right {
+
+    top: 0;
+    right: 0;
+    width: 90px;
+    height: 100%;
+
+}
+
+.edge-bottom {
+
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 90px;
+
+}
+
+.edge-left {
+
+    top: 0;
+    left: 0;
+    width: 90px;
+    height: 100%;
+
+}
+
+.edge-warning-overlay {
+
+    position: absolute;
+    inset: 0;
+    z-index: 3;
+    opacity: 0;
+    pointer-events: none;
+    box-shadow: inset 0 0 80px rgba(180, 20, 20, 0);
+    transition: opacity 0.8s ease, box-shadow 0.8s ease;
+
+}
+
+.edge-zone:hover ~ .edge-warning-overlay {
+
+    opacity: 1;
+    box-shadow: inset 0 0 150px rgba(190, 15, 15, 0.65);
+    transition-delay: 6s;
+
+}
+
+.edge-warning-message {
+
+    position: absolute;
+    left: 50%;
+    bottom: 40px;
+    z-index: 7;
+    width: 90%;
+    max-width: 600px;
+    color: #a00000;
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    line-height: 1.5;
+    text-align: center;
+    opacity: 0;
+    transform: translateX(-50%) translateY(15px);
+    pointer-events: none;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+
+}
+
+.edge-zone:hover ~ .edge-warning-message {
+
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+    transition-delay: 3s;
+
+}
+
+.main {
+
+    position: relative;
+    z-index: 4;
+    width: 100%;
+    padding: 30px;
+    text-align: center;
+
+}
+
+.label {
+
+    margin-bottom: 18px;
+    color: rgba(0, 0, 0, 0.4);
+    opacity: 0;
+    animation: fadeIn 1s ease forwards;
+
+}
+
+.heading {
+
+    font-size: 44px;
+    animation: fadeIn 1s ease 0.3s forwards;
+
+}
+
+.instruction {
+
+    margin-top: 15px;
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 0.95rem;
+    letter-spacing: 0.07em;
+    opacity: 0;
+    animation: fadeIn 1s ease 0.8s forwards;
+
+}
+
+.focus-area {
+
+    width: 320px;
+    margin: 50px auto 0;
+    cursor: crosshair;
+
+}
+
+.focus-circle {
+
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(0, 0, 0, 0.35);
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.15);
+    transition: transform 0.4s ease, background 0.4s ease, border-color 0.4s ease;
+
+}
+
+.focus-area:hover .focus-circle {
+
+    transform: scale(1.05);
+    background: rgba(245, 245, 245, 0.55);
+    border-color: rgba(0, 0, 0, 0.55);
+
+}
+
+.focus-dot {
+
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #111;
+    transition: transform 0.4s ease;
+
+}
+
+.focus-area:hover .focus-dot {
+
+    transform: scale(0.75);
+
+}
+
+.progress-track {
+
+    width: 150px;
+    height: 3px;
+    margin: 22px auto 0;
+    overflow: hidden;
+    border-radius: 999px;
+    background: rgba(0, 0, 0, 0.12);
+
+}
+
+.progress-bar {
+
+    width: 0%;
+    height: 100%;
+    border-radius: 999px;
+    background: #111;
+    transition: width 0.2s linear;
+
+}
+
+.focus-area:hover .progress-bar {
+
+    width: 100%;
+    transition: width 3s linear;
+
+}
+
+.hidden-content {
+
+    max-height: 0;
+    margin-top: 20px;
+    opacity: 0;
+    overflow: hidden;
+    pointer-events: none;
+    transition: opacity 0.7s ease, max-height 0.7s ease;
+
+}
+
+.focus-area:hover .hidden-content {
+
+    max-height: 180px;
+    opacity: 1;
+    pointer-events: auto;
+    transition-delay: 3s;
+
+}
+
+.hidden-message {
+
+    margin-bottom: 18px;
+    color: rgba(0, 0, 0, 0.72);
+    font-size: 1rem;
+    line-height: 1.6;
+    letter-spacing: 0.05em;
+
+}
+
+.continue-button {
+
+    padding: 11px 24px;
+    font-size: 0.8rem;
+
+}
+
+@media (max-width: 700px) {
+
+    .main {
+
+        padding: 24px;
+
+    }
+
+    .heading {
+
+        font-size: 2.3rem;
+
+    }
+
+    .focus-area {
+
+        width: 100%;
+        max-width: 320px;
+        margin-top: 40px;
+
+    }
+
+    .edge-top,
+    .edge-bottom {
+
+        height: 65px;
+
+    }
+
+    .edge-right,
+    .edge-left {
+
+        width: 65px;
+
+    }
+}

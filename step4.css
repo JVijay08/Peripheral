@@ -1,0 +1,180 @@
+body {
+
+    background: #ececec;
+
+}
+
+.background {
+
+    background-image: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url("controlRoom.jpg");
+    filter: blur(9px);
+    transform: scale(1.06);
+
+}
+
+.overlay {
+
+    background: rgba(255, 255, 255, 0.5);
+
+}
+
+.final-content {
+
+    position: relative;
+    z-index: 3;
+    width: 90%;
+    max-width: 820px;
+    text-align: center;
+
+}
+
+.label {
+
+    margin-bottom: 16px;
+    color: rgba(0, 0, 0, 0.45);
+    opacity: 0;
+    animation: fadeIn 0.8s ease forwards;
+
+}
+
+.heading {
+
+    font-size: 46px;
+    animation: fadeIn 0.9s ease 0.3s forwards;
+
+}
+
+.instruction {
+
+    margin-top: 14px;
+    color: rgba(0, 0, 0, 0.55);
+    font-size: 1rem;
+    letter-spacing: 0.07em;
+    opacity: 0;
+    animation: fadeIn 0.9s ease 0.7s forwards;
+
+}
+
+.report {
+
+    margin-top: 30px;
+    padding: 28px;
+    border: 1px solid rgba(0, 0, 0, 0.18);
+    border-radius: 10px;
+    background: rgba(245, 245, 245, 0.88);
+    text-align: left;
+    opacity: 0;
+    animation: fadeIn 1s ease 1.2s forwards;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+
+}
+
+.report-label {
+
+    margin-bottom: 12px;
+    color: rgba(0, 0, 0, 0.45);
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.22em;
+
+}
+
+.profile-name {
+
+    color: #111;
+    font-size: 1.8rem;
+    font-weight: 600;
+
+}
+
+.profile-description {
+
+    margin-top: 8px;
+    color: rgba(0, 0, 0, 0.7);
+    font-size: 0.95rem;
+    line-height: 1.6;
+
+}
+
+.behavior-list {
+
+    margin-top: 22px;
+
+}
+
+.behavior {
+
+    padding: 13px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+
+}
+
+.behavior-name {
+
+    color: #111;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+
+}
+
+.behavior-result {
+
+    margin-top: 5px;
+    color: rgba(0, 0, 0, 0.65);
+    font-size: 0.9rem;
+
+}
+
+.conclusion {
+
+    margin-top: 20px;
+    padding: 15px;
+    border-left: 3px solid rgba(0, 0, 0, 0.55);
+    background: rgba(0, 0, 0, 0.04);
+    color: rgba(0, 0, 0, 0.75);
+    font-size: 0.92rem;
+    line-height: 1.6;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+
+}
+
+.restart-button {
+
+    display: block;
+    width: fit-content;
+    margin: 20px auto 0;
+    padding: 11px 24px;
+    font-size: 0.8rem;
+
+}
+
+@media (max-width: 650px) {
+
+    body {
+
+        overflow-y: auto;
+
+    }
+
+    .final-screen {
+
+        min-height: 100vh;
+        height: auto;
+        padding: 60px 0;
+        overflow: visible;
+
+    }
+
+    .heading {
+
+        font-size: 2.3rem;
+
+    }
+
+    .report {
+
+        padding: 22px;
+
+    }
+}

@@ -1,0 +1,110 @@
+body {
+
+    background: #f4f4f4;
+
+}
+
+.background {
+
+    background-image: linear-gradient(rgba(255, 255, 255, 0.18), rgba(255, 255, 255, 0.18)), url("path.jpg");
+    filter: blur(12px);
+    transform: scale(1.1);
+
+}
+
+.overlay {
+
+    background: rgba(255, 255, 255, 0.35);
+
+}
+
+.content {
+
+    position: relative;
+    z-index: 3;
+    max-width: 760px;
+    padding: 40px 30px;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    border-radius: 12px;
+    background: rgba(245, 245, 245, 0.88);
+    text-align: center;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+
+}
+
+.title {
+
+    color: #111;
+    font-size: 4rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    opacity: 0;
+    animation: fadeIn 1s ease forwards;
+
+}
+
+.description {
+
+    margin-top: 20px;
+    color: #111;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    opacity: 0;
+    animation: fadeIn 1s ease 0.5s forwards;
+
+}
+
+.enter {
+
+    margin-top: 34px;
+    padding: 12px 28px;
+    font-size: 1rem;
+    opacity: 0;
+    animation: fadeIn 0.8s ease 1s forwards;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.18);
+
+}
+
+.enter:hover {
+
+    transform: scale(1.05);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+
+}
+
+.enter:active {
+
+    transform: scale(0.98);
+
+}
+
+@media (max-width: 600px) {
+
+    .content {
+
+        width: 100%;
+        margin-left: 16px;
+        margin-right: 16px;
+        padding: 32px 20px;
+
+    }
+
+    .title {
+
+        font-size: 2.6rem;
+        letter-spacing: 0.12em;
+
+    }
+
+    .description {
+
+        font-size: 0.95rem;
+
+    }
+
+    .enter {
+
+        font-size: 0.85rem;
+
+    }
+}
